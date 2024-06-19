@@ -7,3 +7,13 @@ stock-service = consumer
 email-service = consumer
 
 base-domains module contains DTOs used across the microservices.
+
+curl to create order-event
+---------------------------
+curl --location 'http://localhost:8080/api/v1/order' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "earbuds-order",
+    "quantity": 3,
+    "price": 6000
+}'
